@@ -1,0 +1,167 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/layout_rel"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".mainActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/megafon_title"
+        android:id="@+id/tvMegafonintro"
+        android:textColor="#00985f"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/megafon_phone_title"
+        android:id="@+id/tvPhonenum"
+        android:layout_below="@+id/tvMegafonintro"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone|textAutoComplete"
+        android:ems="10"
+        android:id="@+id/etPhonenum"
+        android:layout_below="@+id/tvPhonenum"
+        android:layout_alignLeft="@+id/tvPhonenum"
+        android:layout_alignStart="@+id/tvPhonenum"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:enabled="true"
+        android:numeric="integer"
+        android:layout_alignParentStart="false"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/megafon_passw_title"
+        android:id="@+id/tvPassw"
+        android:layout_below="@+id/etPhonenum"
+        android:layout_alignLeft="@+id/etPhonenum"
+        android:layout_alignStart="@+id/etPhonenum"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textPassword"
+        android:ems="10"
+        android:id="@+id/etPassw"
+        android:layout_below="@+id/tvPassw"
+        android:layout_alignLeft="@+id/tvPassw"
+        android:layout_alignStart="@+id/tvPassw"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="40dp"
+        android:password="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/megafon_login_button"
+        android:id="@+id/btnLogin"
+        android:layout_alignParentBottom="false"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:layout_alignRight="@+id/tvMegafonintro"
+        android:layout_alignLeft="@+id/tvMegafonintro"
+        android:layout_alignStart="@+id/tvMegafonintro"
+        android:enabled="true"
+        android:elegantTextHeight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvRemainders"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="50dp"
+        android:layout_alignTop="@+id/btnLogin"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/megafon_rememberme"
+        android:id="@+id/chkRemember"
+        android:layout_below="@+id/etPassw"
+        android:layout_alignRight="@+id/etPhonenum"
+        android:layout_alignEnd="@+id/etPhonenum" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/megafon_pass_help"
+        android:id="@+id/tvPasswHelp"
+        android:layout_alignBottom="@+id/tvPassw"
+        android:layout_alignRight="@+id/etPhonenum"
+        android:layout_alignEnd="@+id/etPhonenum"
+        android:textColor="#1d73ec" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivCaptcha"
+        android:layout_alignTop="@+id/tvRemainders"
+        android:layout_alignLeft="@+id/btnLogin"
+        android:layout_alignStart="@+id/btnLogin"
+        android:layout_alignRight="@+id/btnLogin"
+        android:layout_alignEnd="@+id/btnLogin"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/megafon_showad"
+        android:id="@+id/tvShowAd"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignLeft="@+id/btnLogin"
+        android:layout_alignStart="@+id/btnLogin"
+        android:textColor="#1d73ec"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivGlazik"
+        android:layout_alignTop="@+id/etPassw"
+        android:layout_alignEnd="@+id/tvPasswHelp"
+        android:layout_alignBottom="@+id/etPassw"
+        android:src="@drawable/glazik0"
+        android:clickable="true" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Остатки траффика</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="megafon_title" translatable="false">Мегафон</string>
+    <string name="megafon_phone_title">Номер телефона</string>
+    <string name="megafon_passw_title">Пароль</string>
+    <string name="megafon_login_button">Войти</string>
+    <string name="megafon_rememberme">Запомнить данные</string>
+    <string name="megafon_nointernet">Отсутствует подключение к интернету. Включите передачу данных либо подключитесь к WiFi точке и повторите снова.</string>
+    <string name="button_ok">OK</string>
+    <string name="button_no">Нет</string>
+    <string name="megafon_emptyinput">Необходимо заполнить оба поля!</string>
+    <string name="megafon_loading">Загрузка...</string>
+    <string name="megafon_error">При получении данных возникла ошибка. Попробуйте снова через несколько секунд.</string>
+    <string name="megafon_pass_help">Как получить пароль?</string>
+    <string name="megafon_passw_help_title">Получение пароля</string>
+    <string name="megafon_passw_help_text">Для получения или восстановления пароля введите с клавиатуры устройства запрос *105*00#.</string>
+    <string name="megafon_error_loginw">Неверный логин и/или пароль! Проверьте правильность введённых данных и попробуйте снова.</string>
+    <string name="megafon_captcha_title">Введите код с картинки</string>
+    <string name="megafon_captcha_err">Код с картинки введён неверно!</string>
+    <string name="megafon_error_blocked">Аккаунт заблокирован. Активируйте новый пароль отправив с устройства запрос *105*00#.</string>
+    <string name="appwidget_text">Ожидание...</string>
+    <string name="add_widget">Add widget</string>
+    <string name="megafon_showad">Посмотреть рекламу</string>
+    <string name="megafon_get_pass">Получить пароль</string>
+</resources>
